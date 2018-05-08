@@ -7,9 +7,9 @@
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x2260
 #define DEVICE_VER      0x0001
-#define MANUFACTURER    KBDFans
-#define PRODUCT         DZ60
-#define DESCRIPTION     DZ60 Keyboard
+#define MANUFACTURER    Insignificant Technologies
+#define PRODUCT         blrn60
+#define DESCRIPTION     blrn60 Keyboard
 
 /* key matrix size */
 #define MATRIX_ROWS 5
