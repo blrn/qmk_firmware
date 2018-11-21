@@ -15,10 +15,7 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-#ifndef CONFIG_USER_H
-#define CONFIG_USER_H
-
-#include "config_common.h"
+#pragma once
 
 /* Use I2C or Serial, not both */
 
@@ -33,14 +30,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifdef RGBLIGHT_ENABLE
 #undef RGBLED_NUM
-#define RGBLED_NUM 16     // Number of LEDs
-#define RGBLIGHT_ANIMATIONS
+#define RGBLED_NUM 18     // Number of LEDs
+
 #define RGBLIGHT_HUE_STEP 12
 #define RGBLIGHT_SAT_STEP 12
 #define RGBLIGHT_VAL_STEP 12
 #define RGBLIGHT_EFFECT_KNIGHT_LENGTH 2
 #define RGBLIGHT_EFFECT_SNAKE_LENGTH 2
 #define RGBLIGHT_EFFECT_BREATHE_CENTER 1
+
+#define RGBLIGHT_LIMIT_VAL 225
 #endif // RGBLIGHT_ENABLE
 
 #ifdef AUDIO_ENABLE
@@ -50,10 +49,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #endif //RGBLIGHT_ENABLE
 #endif //AUDIO_ENABLE
 
+#define QMK_ESC_OUTPUT F6 // usually COL
+#define QMK_ESC_INPUT D7 // usually ROW
+#define QMK_LED B0
+#define QMK_SPEAKER C6
 
 #undef PRODUCT
 #ifdef KEYBOARD_iris_rev2
 #define PRODUCT         Drashna Hacked Iris Rev.2
 #endif
 
-#endif
+#define SHFT_LED1 6
+#define SHFT_LED2 11
+
+#define CTRL_LED1 7
+#define CTRL_LED2 10
+
+#define ALT_LED1 8
+#define GUI_LED1 9
+
+#define BOOTMAGIC_LITE_ROW 4
+#define BOOTMAGIC_LITE_COLUMN 3
